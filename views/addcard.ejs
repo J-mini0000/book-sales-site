@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>카드 등록
+        </title>
+    </head>
+    <body>
+        <A href="./">메인화면으로 이동</A>
+        <h2>카드등록</h2>
+        <form action='/addcardAf' method='post'  >
+            카드번호 : <input style="width : 200px" type='text' name='Card_cardnumber' placeholder="카드번호 12자리 (- 제외 입력)"><br>
+            카드기간 : <input style="width : 200px" type='number' name='Card_term' placeholder="MM/YY (/ 제외 입력)" ><br>
+            카드종류 : <input style="width : 200px" type='text' name='Card_cardkinds' placeholder="ex)xx은행"><br>
+            회원번호 : <input style="width : 200px" type='text' name='membernumber' placeholder="본인ID를 정확히 입력해주세요" ><br>
+            <button type='submit'>업로드</button>
+        </form>
+    </body>
+</html>

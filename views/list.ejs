@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>게시글</title>
+    </head>
+    <body>
+        <h2>게시글 리스트</h2>
+        <table border='1'>
+            <colgroup>
+                <col width='60'><col width='200'><col width='100'>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>책번호</th>
+                    <th>책제목</th>
+                    <th>재고량</th>
+                    <th>가격</th>
+                    <th>기능</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(i = 0; i < list.length; i++) { %>
+                <tr>
+                    <td><%=list[i].Book_number %></td>
+                    <td><%=list[i].Book_name %></td>
+                    <td><%=list[i].Book_stock %></td>
+                    <td><%=list[i].Book_price %></td>
+                    <td>
+                        <form>
+                        <button action='/rnaoAf' onclick="location.href='../rnao'">'<%=list[i].Book_name %>'바로구매</button>
+                        <button onclick="location.href='../shopbasket'">'<%=list[i].Book_name %>'장바구니담기</button>
+                    </form>
+                </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table boader='1'>
+        
+        <button onclick="location.href='../write'">글작성</button>
+        <button onclick="location.href='../'">메인페이지</button>
+    </body>
+</html>
+
